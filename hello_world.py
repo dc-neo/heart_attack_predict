@@ -22,7 +22,7 @@ scenario_cfg = Config.configure_scenario("scenario", task_configs=[build_msg_tas
 #            Design graphical interface                        #
 ################################################################
 
-input_name = "Taipy"
+input_name = "Taipy staging"
 message = None
 
 
