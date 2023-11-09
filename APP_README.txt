@@ -7,3 +7,7 @@ To run Locally
 >   deactivate
 >   python3.9.19 -m venv .venv
 >   source .venv/bin/activate
+
+heroku config -s -a <app_name> > .env
+heroku local
+
