@@ -47,7 +47,7 @@
         <label><input type="radio" name="serum_chol" value="260">260</label>
         <hr>
         <p>Q6. Is fasting blood sugar greater than 120mg/dl?</p>
-        <label><input type="radio" name="fasting_blood_sugar" value="1">True</label>
+        <label><input type="radio" name="fasting_blood_sugar" value="1" checked>True</label>
         <label><input type="radio" name="fasting_blood_sugar" value="0">False</label>
         <hr>
         <p>Q7. What is the resting ECG results?</p>
@@ -128,9 +128,9 @@
                 let predictedResult=result;
                 let htmlStr="";
                 if(predictedResult=="Yes") {
-                  htmlStr+="<b>Yes, </b> he/she is likely to seek mental healthcare treatment.";
+                  htmlStr+="<b>Yes, </b> he/she/they have a likelihood of developing heart disease.";
                 } else if(predictedResult=="No") {
-                  htmlStr+="<b>No, </b> he/she is unlikely to seek mental healthcare treatment.";
+                  htmlStr+="<b>No, </b> he/she/they are unlikely to develop heart disease.";
                 }
                 $("#predictionOutcome").html(htmlStr);
             },
