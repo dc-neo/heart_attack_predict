@@ -4,7 +4,7 @@ import pandas as pd
 import json
 import os
 import pickle
-model_filename="./heart_attack_model.pkl"
+model_filename="./heart_attack"
 import numpy as np
 # Initalise the Flask app
 app = Flask(__name__)
@@ -28,7 +28,7 @@ def predict():
     f.close()
     all_cols=X_test
     input_df=pd.DataFrame(msg_data,columns=all_cols,index=[0])
-    model = pickle.load(open(model_filename, "rb"))
+    model=load_model(model_filename)
     arr_results = model.predict(input_df)
     treatment_likelihood=""
     if arr_results[0]==0:
