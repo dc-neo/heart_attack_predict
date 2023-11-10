@@ -46,27 +46,51 @@
         <label><input type="radio" name="serum_chol" value="250">250</label>
         <label><input type="radio" name="serum_chol" value="260">260</label>
         <hr>
-        <p>Q6. What is the sex of the individual?</p>
-        <label><input type="radio" name="past_disorder" value="2" checked>Yes</label>
-        <label><input type="radio" name="past_disorder" value="0">Maybe</label>
-        <label><input type="radio" name="past_disorder" value="1">No</label>
+        <p>Q6. Is fasting blood sugar greater than 120mg/dl?</p>
+        <label><input type="radio" name="fasting_blood_sugar" value="1">True</label>
+        <label><input type="radio" name="fasting_blood_sugar" value="0">False</label>
         <hr>
-        <p>Q7. What is the valud of cp ?</p>
-        <label><input type="radio" name="care_options" value="1" checked>Yes</label>
-        <label><input type="radio" name="care_options" value="0">No</label>
+        <p>Q7. What is the resting ECG results?</p>
+        <label><input type="radio" name="ecg_results" value="1" checked>Normal</label>
+        <label><input type="radio" name="ecg_results" value="2">Having ST-T wave abnormal</label>
+        <label><input type="radio" name="ecg_results" value="0">hypertrophy</label>
         <hr>
-        <p>Q8. What is the fbs rating ?</p>
-        <label><input type="radio" name="friends_family" value="0" checked>0</label>
-        <label><input type="radio" name="friends_family" value="1">1</label>
-        <label><input type="radio" name="friends_family" value="2">2</label>
-        <label><input type="radio" name="friends_family" value="3">3</label>
-        <label><input type="radio" name="friends_family" value="4">4</label>
-        <label><input type="radio" name="friends_family" value="5">5</label>
-        <label><input type="radio" name="friends_family" value="6">6</label>
-        <label><input type="radio" name="friends_family" value="7">7</label>
-        <label><input type="radio" name="friends_family" value="8">8</label>
-        <label><input type="radio" name="friends_family" value="9">9</label>
-        <label><input type="radio" name="friends_family" value="10">10</label>
+        <p>Q8. What is the maximum heart rate acheived ?</p>
+        <label><input type="radio" name="max_heart_rate" value="150" checked>150</label>
+        <label><input type="radio" name="max_heart_rate" value="160">160</label>
+        <label><input type="radio" name="max_heart_rate" value="170">170</label>
+        <label><input type="radio" name="max_heart_rate" value="180">180</label>
+        <label><input type="radio" name="max_heart_rate" value="190">190</label>
+        <hr>
+        <p>Q9. Does the patient have chest pain?</p>
+        <label><input type="radio" name="chest_pain" value="1" checked>Typical Angina</label>
+        <label><input type="radio" name="chest_pain" value="2">Atypical Angina</label>
+        <label><input type="radio" name="chest_pain" value="3">Non-anginal pain </label>
+        <label><input type="radio" name="chest_pain" value="0">hypertrophy</label>
+        <hr>
+        <p>Q10. Does the patient have ST depression induced by exercise relative to rest?</p>
+        <label><input type="radio" name="st_depression" value="0.6" checked>0.6</label>
+        <label><input type="radio" name="st_depression" value="1.0">1.0</label>
+        <label><input type="radio" name="st_depression" value="1.5">1.5</label>
+        <label><input type="radio" name="st_depression" value="2.0">2.0</label>
+        <label><input type="radio" name="st_depression" value="2.5">2.5</label>
+        <label><input type="radio" name="st_depression" value="0">0</label>
+        <hr>
+        <p>Q11. What is the slope of peak exercise ST segment ?</p>
+        <label><input type="radio" name="slope" value="1" checked>Flat</label>
+        <label><input type="radio" name="slope" value="2">Upsloping</label>
+        <label><input type="radio" name="slope" value="0">DownSloping</label>
+        <hr>
+        <p>Q12. What is the number of major vessels colored by flouroscopy ?</p>
+        <label><input type="radio" name="number_vessels" value="1" checked>1</label>
+        <label><input type="radio" name="number_vessels" value="2">2</label>
+        <label><input type="radio" name="number_vessels" value="3">3</label>
+        <label><input type="radio" name="number_vessels" value="0">0</label>
+        <hr>
+        <p>Q13. What is the thal factor ?</p>
+        <label><input type="radio" name="thal" value="1" checked>Fixed defect</label>
+        <label><input type="radio" name="thal" value="2">Normal</label>
+        <label><input type="radio" name="thal" value="3">Reversible Defect</label>
         <br><br>
         <input type="submit" value="Predict!">
     </form>
@@ -82,9 +106,18 @@
             "exercise_angina":allElements.exercise_angina.value,
             "resting_bp":allElements.resting_bp.value,
             "serum_chol":allElements.serum_chol.value,
-            "past_disorder":allElements.past_disorder.value,
-            "care_options":allElements.care_options.value,
-            "friends_family":allElements.friends_family.value
+            "fasting_blood_sugar":allElements.fasting_blood_sugar.value,
+            "ecg_results":allElements.ecg_results.value,
+            "max_heart_rate":allElements.max_heart_rate.value,
+            "serum_chol":allElements.serum_chol.value,
+            "fasting_blood_sugar":allElements.fasting_blood_sugar.value,
+            "ecg_results":allElements.ecg_results.value,
+            "max_heart_rate":allElements.max_heart_rate.value,
+            "chest_pain":allElements.chest_pain.value,
+            "st_depression":allElements.st_depression.value,
+            "slope":allElements.slope.value,
+            "number_vessels":allElements.number_vessels.value,
+            "thal":allElements.thal.value
           }
           var jsonStr=JSON.stringify(json)
           console.log(jsonStr)
