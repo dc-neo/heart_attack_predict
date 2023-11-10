@@ -30,10 +30,11 @@ def predict():
     f.close()
     all_cols=X_test
     input_df=pd.DataFrame(msg_data,columns=all_cols,index=[0])
-    app.logger.warning("test log")
+    app.logger.warning("test log", input_df)
     cat_cols = ['sex', 'cp', 'fbs', 'restecg', 'exng', 'slp', 'caa', 'thall']
     con_cols = ['age', 'trtbps', 'chol', 'thalachh', 'oldpeak']
     ha_encoded_data = pd.get_dummies(input_df, columns = cat_cols)
+    app.logger.warning("test log", input_df)
     model=load_model(model_filename)
     arr_results = model.predict(input_df)
     treatment_likelihood=""
