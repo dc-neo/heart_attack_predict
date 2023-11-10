@@ -36,7 +36,7 @@ def predict():
     ha_encoded_data = pd.get_dummies(input_df, columns = cat_cols)
     app.logger.warning("test log", input_df)
     model=load_model(model_filename)
-    arr_results = model.predict(input_df)
+    arr_results = model.predict(ha_encoded_data)
     treatment_likelihood=""
     if arr_results[0]==0:
     	treatment_likelihood="No"
