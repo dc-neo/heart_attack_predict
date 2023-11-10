@@ -101,22 +101,21 @@
           event.preventDefault();
           var allElements=event.target.elements;
           var json={
-            "person_age":allElements.person_age.value,
-            "person_sex":allElements.person_sex.value,
-            "exercise_angina":allElements.exercise_angina.value,
-            "resting_bp":allElements.resting_bp.value,
-            "serum_chol":allElements.serum_chol.value,
-            "fasting_blood_sugar":allElements.fasting_blood_sugar.value,
+            "age":allElements.person_age.value,
+            "sex":allElements.person_sex.value,
+            "exang":allElements.exercise_angina.value,
+            "trbps":allElements.resting_bp.value,
+            "chol":allElements.serum_chol.value,
+            "fbs":allElements.fasting_blood_sugar.value,
             "ecg_results":allElements.ecg_results.value,
+            "thalach":allElements.max_heart_rate.value,
+            "chol":allElements.serum_chol.value,
+            "restecg":allElements.ecg_results.value,
             "max_heart_rate":allElements.max_heart_rate.value,
-            "serum_chol":allElements.serum_chol.value,
-            "fasting_blood_sugar":allElements.fasting_blood_sugar.value,
-            "ecg_results":allElements.ecg_results.value,
-            "max_heart_rate":allElements.max_heart_rate.value,
-            "chest_pain":allElements.chest_pain.value,
-            "st_depression":allElements.st_depression.value,
+            "cp":allElements.chest_pain.value,
+            "oldpeak":allElements.st_depression.value,
             "slope":allElements.slope.value,
-            "number_vessels":allElements.number_vessels.value,
+            "ca":allElements.number_vessels.value,
             "thal":allElements.thal.value
           }
           var jsonStr=JSON.stringify(json)
