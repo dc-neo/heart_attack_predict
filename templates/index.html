@@ -18,11 +18,11 @@
   <body>
       <form id="predict" method="POST">
         <p>Q1. What is the age of the individual? </p>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="0" checked>Not applicable to him/her</label>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="1">Never</label>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="2">Rarely</label>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="3">Sometimes</label>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="4">Often</label>
+        <label><input type="radio" name="person_age" value="10">10</label>
+        <label><input type="radio" name="person_age" value="21">21</label>
+        <label><input type="radio" name="person_age" value="32">32</label>
+        <label><input type="radio" name="person_age" value="42">42</label>
+        <label><input type="radio" name="person_age" value="54">54</label>
         <hr>
         <p>Q2. What is the value of trtbps ?</p>
         <label><input type="radio" name="diagnosed_disorder" value="1" checked>Yes</label>
@@ -76,7 +76,7 @@
           event.preventDefault();
           var allElements=event.target.elements;
           var json={
-            "work_interfere_non_effective_treatment":allElements.work_interfere_non_effective_treatment.value,
+            "person_age":allElements.person_age.value,
             "diagnosed_disorder":allElements.diagnosed_disorder.value,
             "work_interfere_effective_treatment":allElements.work_interfere_effective_treatment.value,
             "current_disorder":allElements.current_disorder.value,
