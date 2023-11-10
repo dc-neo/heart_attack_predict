@@ -1,6 +1,7 @@
 from flask import Flask,request, url_for, redirect, render_template, jsonify
 from pycaret.regression import *
 import pandas as pd
+import json
 import os
 import pickle
 model_filename="./heart_attack_model.pkl"
